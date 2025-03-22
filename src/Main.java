@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -34,8 +36,19 @@ public class Main {
         System.out.println(status1);
         System.out.println(status2);
 
+        //--------------------------------------------
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Digite três caracteres:");
+        char char1 = scanner.next().charAt(0); // Lê o primeiro caractere
+        char char2 = scanner.next().charAt(0); // Lê o segundo caractere
+        char char3 = scanner.next().charAt(0); // Lê o terceiro caractere
 
+        // Concatena e exibe os caracteres
+        System.out.println("Os caracteres digitados foram: " + char1 + char2 + char3);
+        scanner.close();
+
+        
 
 
 
