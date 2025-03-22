@@ -61,9 +61,40 @@ public class Main {
         //------------------------------------------------------------------------------------------
         //Parsing de Strings
 
-        String numeroTexto = "42";
-        int numeroInt = Integer.parseInt(numeroTexto);
-        System.out.println(numeroInt); // Saída: 42
+//        String numeroTexto = "42";
+  //      int numeroInt = Integer.parseInt(numeroTexto);
+    //    System.out.println(numeroInt); // Saída: 42
+
+      //  byte valor = 127;
+        //valor++;
+        //System.out.println(valor); // Saída: -128 (overflow)
+
+
+//------------------------------------------------------------------------------------------------------
+
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite um número inteiro: ");
+        String inputInt = scanner.nextLine();
+
+        try {
+            int numeroInt = Integer.parseInt(inputInt);
+            System.out.println("Número inteiro convertido: " + numeroInt);
+        } catch (NumberFormatException e) {
+            System.out.println("Erro ao converter para inteiro: " + e.getMessage());
+        }
+
+        System.out.print("Digite um número decimal: ");
+        String inputDouble = scanner.nextLine();
+
+        try {
+            double numeroDouble = Double.parseDouble(inputDouble);
+            System.out.println("Número decimal convertido: " + numeroDouble);
+        } catch (NumberFormatException e) {
+            System.out.println("Erro ao converter para decimal: " + e.getMessage());
+        }
+
 
 
 
